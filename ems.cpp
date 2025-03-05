@@ -186,7 +186,7 @@ int main()
         {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Invalid input. Please enter a number: ";
+            cout << "Invalid input.\nPlease enter a number: ";
         }
         cin.ignore();
 
@@ -206,7 +206,7 @@ int main()
             {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Invalid input. Please enter a number: ";
+                cout << "Invalid input.\nPlease enter a number: ";
             }
             cin.ignore();
 
