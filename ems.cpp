@@ -63,11 +63,11 @@ public:
         }
 
         Event *temp = head;
-        cout<<"\n";
+        cout << "\n";
         cout << "\nUpcoming Events:\n";
         while (temp)
         {
-            cout<<"\n";
+            cout << "\n";
             cout << "Event: " << temp->name
                  << " | Date: " << temp->date
                  << " | Venue: " << temp->venue
@@ -120,15 +120,38 @@ public:
     void saveToFile()
     {
         ofstream file("events.txt");
+
+        // Initialize the counter to count the number of events
+        int n = 0;
         Event *temp = head;
+
+        // Count the number of events in the list
         while (temp)
         {
-            file << temp->name << "\n"
-                 << temp->date << "\n"
-                 << temp->venue << "\n"
-                 << temp->priority << "\n";
+            n++; // Increment for each event
             temp = temp->next;
         }
+
+        // Write each event with RECORD 1, RECORD 2 format
+        temp = head;
+        int recordNumber = 1;
+        while (temp)
+        {
+            file << "RECORD " << recordNumber << "\n";
+            file << "====================\n";
+            file << "Event: " << temp->name << "\n"
+                 << "Date: " << temp->date << "\n"
+                 << "Venue: " << temp->venue << "\n"
+                 << "Priority: " << temp->priority << "\n";
+            file << "====================\n";
+
+            temp = temp->next;
+            recordNumber++; // Increment the record number
+        }
+
+        // Add the total number of records at the end of the file
+        file << "Total Records: " << n << "\n";
+
         file.close();
     }
 

@@ -1,0 +1,22 @@
+RECORD 1
+====================
+Event: Club Day
+Date: 2025-03-10
+Venue: KCC
+Priority: 3
+====================
+RECORD 2
+====================
+Event: Meeting
+Date: 2025-03-07
+Venue: Mareba
+Priority: 2
+====================
+RECORD 3
+====================
+Event: CPD
+Date: 2025-03-06
+Venue: MAREBA
+Priority: 1
+====================
+Total Records: 3
